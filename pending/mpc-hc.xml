@@ -1,55 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    BleachBit
-    Copyright (C) 2008-2015 Andrew Ziem
-    http://www.bleachbit.org
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-
-    Contributor :  8ohmh
-    Web site    :  https://mpc-hc.org/
-
-
-Testing environment
-
-Build information:
-    Version:            1.7.1 (9ae7b7c)
-    Compiler:           MSVC 2012 Update 4 (SSE)
-    Build date:         Nov 17 2013 09:24:49
-
-LAV Filters:
-    LAV Splitter:       0.59.1.26
-    LAV Video:          0.59.1.26
-    LAV Audio:          0.59.1.26
-    FFmpeg compiler:    MinGW-w64 GCC 4.8.2
-
-Operating system:
-    Name:               Windows NT 6.1 (build 7601, Service Pack 1)
-    Version:            6.1 (64-bit)
-
--->
+<!-- BleachBit Copyright (C) 2008-2015 Andrew Ziem http://www.bleachbit.org This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. Contributor : 8ohmh Web site : https://mpc-hc.org/ Testing environment Build information: Version: 1.7.1 (9ae7b7c) Compiler: MSVC 2012 Update 4 (SSE) Build date: Nov 17 2013 09:24:49 LAV Filters: LAV Splitter: 0.59.1.26 LAV Video: 0.59.1.26 LAV Audio: 0.59.1.26 FFmpeg compiler: MinGW-w64 GCC 4.8.2 Operating system: Name: Windows NT 6.1 (build 7601, Service Pack 1) Version: 6.1 (64-bit) -->
 <cleaner id="mpc-hc" os="windows">
-	<label>MPlayer-HC</label>
-	<description>Media player</description>
-	<option id="history">
-		<label>Most recently used</label>
-		<description>Delete the most recently used list</description>
-		<action command="winreg" path="HKCU\Software\MPC-HC\MPC-HC\Recent File List" />
-		<action command="delete" search="file" path="$APPDATA\MPC-HC\default.mpcpl"/>
-		</option>
+    <label>MPlayer-HC</label>
+    <description>Media player</description>
+    <option id="history">
+        <label>Most recently used</label>
+        <description>Delete the most recently used list</description>
+        <action command="winreg" path="HKCU\Software\MPC-HC\MPC-HC\Recent File List" />
+        <action command="delete" search="file" path="$APPDATA\MPC-HC\default.mpcpl" />
+    </option>
 </cleaner>
-

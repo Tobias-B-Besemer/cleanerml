@@ -1,43 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    BleachBit
-    Copyright (C) 2012 Andrew Ziem
-    http://www.bleachbit.org
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
--->
+<!-- BleachBit Copyright (C) 2012 Andrew Ziem http://www.bleachbit.org This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <cleaner id="sabnzbd">
-  <label>SABnzbd</label>
-  <description>Usenet client</description>
-  <option id="logs">
-    <label>Logs</label>
-    <description>Deletes the logs</description>
-    <action search="glob" command="delete" path="$LOCALAPPDATA\sabnzbd\logs\*.log"/>
-    <action search="glob" command="delete" path="~\.sabnzbd\logs\*.log"/>
-  </option>
-  <option id="history">
-    <label>History</label>
-    <description>Clears the history.</description>
-    <action search="file" command="delete" path="~\.sabnzb\admin\history.db"/>
-    <action search="file" command="delete" path="$LOCALAPPDATA\sabnzbd\admin\history.db"/>
-  </option>
-  <option id="settings_backups">
-    <label>Backups</label>
-    <description>Clears the settings backups. You will be unable to restore them in the event something goes wrong </description>
-    <action search="glob" command="delete" path="~\.sabnzbd\*.bak"/>
-    <action search="glob" command="delete" path="$LOCALAPPDATA\sabnzbd\*.bak"/>
-  </option>
+    <label>SABnzbd</label>
+    <description>Usenet client</description>
+    <option id="logs">
+        <label>Logs</label>
+        <description>Deletes the logs</description>
+        <action search="glob" command="delete" path="$LOCALAPPDATA\sabnzbd\logs\*.log" />
+        <action search="glob" command="delete" path="~\.sabnzbd\logs\*.log" />
+    </option>
+    <option id="history">
+        <label>History</label>
+        <description>Clears the history.</description>
+        <action search="file" command="delete" path="~\.sabnzb\admin\history.db" />
+        <action search="file" command="delete" path="$LOCALAPPDATA\sabnzbd\admin\history.db" />
+    </option>
+    <option id="settings_backups">
+        <label>Backups</label>
+        <description>Clears the settings backups. You will be unable to restore them in the event something goes wrong
+        </description>
+        <action search="glob" command="delete" path="~\.sabnzbd\*.bak" />
+        <action search="glob" command="delete" path="$LOCALAPPDATA\sabnzbd\*.bak" />
+    </option>
 </cleaner>
