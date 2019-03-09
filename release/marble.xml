@@ -1,51 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    BleachBit
-    Copyright (C) 2011 Andrew Ziem
-    http://www.bleachbit.org
-
-    Cleaner for marble by nodiscc
-    Copyright © 2016 nodiscc
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-    @url http://marble.kde.org/
-    @tested ok 2.0.3, Debian 9 Stretch
-
--->
+<!-- BleachBit Copyright (C) 2011 Andrew Ziem http://www.bleachbit.org Cleaner for marble by nodiscc Copyright © 2016 nodiscc This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. @url http://marble.kde.org/ @tested ok 2.0.3, Debian 9 Stretch -->
 <cleaner id="marble" os="linux">
-  <label>Marble</label>
-  <description>virtual globe and world atlas</description>
-  <option id="maps">
-    <label>Downloaded maps</label>
-    <description>Custom maps downloaded from the "More maps" dialog</description>
-    <action search="walk.all" command="delete" path="~/.local/share/marble/maps/"/>
-  </option>
-  <option id="cache">
-    <label>Cache</label>
-    <description>Other cached files</description>
-    <action search="walk.all" command="delete" path="~/.local/share/marble/cache/"/>
-  </option>
-  <option id="routing">
-    <label>Routing data</label>
-    <description>Cached routing queries and paths</description>
-    <action search="walk.all" command="delete" path="~/.local/share/marble/routing/"/>
-  </option>
-  <option id="tracking">
-    <label>Tracking</label>
-    <description>Stored GPS traces</description>
-    <action search="walk.all" command="delete" path="~/.local/share/marble/tracking/"/>
-  </option>
+    <label>Marble</label>
+    <description>virtual globe and world atlas</description>
+    <option id="maps">
+        <label>Downloaded maps</label>
+        <description>Custom maps downloaded from the "More maps" dialog</description>
+        <action search="walk.all" command="delete" path="~/.local/share/marble/maps/" />
+    </option>
+    <option id="cache">
+        <label>Cache</label>
+        <description>Other cached files</description>
+        <action search="walk.all" command="delete" path="~/.local/share/marble/cache/" />
+    </option>
+    <option id="routing">
+        <label>Routing data</label>
+        <description>Cached routing queries and paths</description>
+        <action search="walk.all" command="delete" path="~/.local/share/marble/routing/" />
+    </option>
+    <option id="tracking">
+        <label>Tracking</label>
+        <description>Stored GPS traces</description>
+        <action search="walk.all" command="delete" path="~/.local/share/marble/tracking/" />
+    </option>
 </cleaner>

@@ -1,47 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    BleachBit
-    Copyright (C) 2014 Andrew Ziem
-    http://www.bleachbit.org
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
--->
+<!-- BleachBit Copyright (C) 2014 Andrew Ziem http://www.bleachbit.org This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <cleaner id="minetest" os="linux">
-  <label>Minetest</label>
-  <description>3D voxel world game engine</description>
-  <option id="cache">
-    <label>Cache</label>
-    <description>Delete the cache</description>
-    <action command="delete" search="walk.all" path="~/.minetest/cache/"/>
-  </option>
-  <option id="debug_logs">
-    <label>Debug logs</label>
-    <description>Delete the debug logs</description>
-    <action command="delete" search="file" path="~/.minetest/debug.txt"/>
-  </option>
-  <option id="favorite_server_list">
-    <label>Favorite server list</label>
-    <description>Delete the list of favorite servers</description>
-    <action command="delete" search="file" path="~/.minetest/client/serverlist/favoriteservers.txt"/>
-  </option>
-  <option id="worlds">
-    <label>Compress worlds</label>
-    <description>Compress the world and rollback files to save space without deleting them.</description>
-    <warning>This may take a long time. The duration increases with the number and size of the installed worlds.</warning>
-    <action command="sqlite.vacuum" search="glob" path="~/.minetest/worlds/*/map.sqlite"/>
-    <action command="sqlite.vacuum" search="glob" path="~/.minetest/worlds/*/rollback.sqlite"/>
-  </option>
+    <label>Minetest</label>
+    <description>3D voxel world game engine</description>
+    <option id="cache">
+        <label>Cache</label>
+        <description>Delete the cache</description>
+        <action command="delete" search="walk.all" path="~/.minetest/cache/" />
+    </option>
+    <option id="debug_logs">
+        <label>Debug logs</label>
+        <description>Delete the debug logs</description>
+        <action command="delete" search="file" path="~/.minetest/debug.txt" />
+    </option>
+    <option id="favorite_server_list">
+        <label>Favorite server list</label>
+        <description>Delete the list of favorite servers</description>
+        <action command="delete" search="file" path="~/.minetest/client/serverlist/favoriteservers.txt" />
+    </option>
+    <option id="worlds">
+        <label>Compress worlds</label>
+        <description>Compress the world and rollback files to save space without deleting them.</description>
+        <warning>This may take a long time. The duration increases with the number and size of the installed worlds.</warning>
+        <action command="sqlite.vacuum" search="glob" path="~/.minetest/worlds/*/map.sqlite" />
+        <action command="sqlite.vacuum" search="glob" path="~/.minetest/worlds/*/rollback.sqlite" />
+    </option>
 </cleaner>

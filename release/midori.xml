@@ -1,60 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    BleachBit
-    Copyright (C) 2010-2014 Andrew Ziem
-    http://www.bleachbit.org
-    
-    Midori cleaner
-    from <https://bugs.launchpad.net/bleachbit/+bug/571114>
-    Copyright (C) 2010-2014 Rogério Theodoro de Brito
-    Copyright (C) 2010-2014 nodiscc
-    Copyright (C) 2010-2014 Andrew Ziem
-    Copyright (C) 2010-2014 Theatre-X
-    Copyright (C) 2010-2014 SpaceCafé
-
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
--->
+<!-- BleachBit Copyright (C) 2010-2014 Andrew Ziem http://www.bleachbit.org Midori cleaner from <https://bugs.launchpad.net/bleachbit/+bug/571114> Copyright (C) 2010-2014 Rogério Theodoro de Brito Copyright (C) 2010-2014 nodiscc Copyright (C) 2010-2014 Andrew Ziem Copyright (C) 2010-2014 Theatre-X Copyright (C) 2010-2014 SpaceCafé This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <cleaner id="midori">
-  <label>Midori</label>
-  <description>Web browser</description>
-  <option id="cache">
-    <label>Cache</label>
-    <description>Delete the cache</description>
-    <action command="delete" search="walk.files" path="~/.cache/midori/"/>
-    <action command="delete" search="walk.files" path="$APPDATA\local\webkit\icondatabase\WebpageIcons.db"/>
-    <action command="delete" search="walk.files" path="$APPDATA\local\webkit\databases\*"/>
-    <!-- FIXME: add Windows cache path -->
-  </option>
-  <option id="cookies">
-    <label>Cookies</label>
-    <description>Delete cookies, which contain information such as web site preferences, authentication, and tracking identification</description>
-    <action command="delete" search="glob" path="$APPDATA\Local\midori\cookies.txt"/>
-    <action command="delete" search="glob" path="~/.config/midori/cookies.*"/>
-  </option>
-  <option id="history">
-    <label>History</label>
-    <description>Delete the history which includes visited sites, downloads, and thumbnails</description>
-    <action command="delete" search="glob" path="$APPDATA\Local\midori\history*"/>
-    <action command="delete" search="glob" path="~/.config/midori/history.*"/>
-  </option>
-  <option id="tabtrash">
-    <label>Closed Tabs History</label>
-    <description>Delete the list of previously closed tabs.</description>
-    <action command="delete" search="glob" path="$APPDATA\Local\midori\tabtrash*"/>
-    <action command="delete" search="glob" path="~/.config/midori/tabtrash.*"/>
-  </option>
+    <label>Midori</label>
+    <description>Web browser</description>
+    <option id="cache">
+        <label>Cache</label>
+        <description>Delete the cache</description>
+        <action command="delete" search="walk.files" path="~/.cache/midori/" />
+        <action command="delete" search="walk.files" path="$APPDATA\local\webkit\icondatabase\WebpageIcons.db" />
+        <action command="delete" search="walk.files" path="$APPDATA\local\webkit\databases\*" />
+        <!-- FIXME: add Windows cache path -->
+    </option>
+    <option id="cookies">
+        <label>Cookies</label>
+        <description>Delete cookies, which contain information such as web site preferences, authentication, and tracking identification</description>
+        <action command="delete" search="glob" path="$APPDATA\Local\midori\cookies.txt" />
+        <action command="delete" search="glob" path="~/.config/midori/cookies.*" />
+    </option>
+    <option id="history">
+        <label>History</label>
+        <description>Delete the history which includes visited sites, downloads, and thumbnails</description>
+        <action command="delete" search="glob" path="$APPDATA\Local\midori\history*" />
+        <action command="delete" search="glob" path="~/.config/midori/history.*" />
+    </option>
+    <option id="tabtrash">
+        <label>Closed Tabs History</label>
+        <description>Delete the list of previously closed tabs.</description>
+        <action command="delete" search="glob" path="$APPDATA\Local\midori\tabtrash*" />
+        <action command="delete" search="glob" path="~/.config/midori/tabtrash.*" />
+    </option>
 </cleaner>

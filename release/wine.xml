@@ -1,45 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-
-    BleachBit
-    Copyright (C) 2011 Andrew Ziem
-    http://www.bleachbit.org
-
-    Cleaner for WINE by nodiscc
-    Copyright © 2016 nodiscc
-
-    This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
-
-    You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
--->
+<!-- BleachBit Copyright (C) 2011 Andrew Ziem http://www.bleachbit.org Cleaner for WINE by nodiscc Copyright © 2016 nodiscc This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>. -->
 <cleaner id="wine" os="linux">
-  <label>WINE</label>
-  <description>Windows API implementation</description>
-  <option id="fileassociations">
-    <label>File associations</label>
-    <description>Delete WINE programs file associations</description>     
-    <action search="glob" command="delete" path="~/.local/share/mime/packages/x-wine*"/>
-    <action search="glob" command="delete" path="~/.local/share/applications/wine-extension*"/>
-    <action search="glob" command="delete" path="~/.local/share/icons/hicolor/*/*/application-x-wine-extension*"/>
-    <action search="glob" command="delete" path="~/.local/share/mime/application/x-wine-extension*"/>
-  </option>
-  <option id="menuentries">
-    <label>Menu entries</label>
-    <description>Delete WINE program menu entries</description>     
-    <action search="glob" command="delete" path="~/.config/menus/applications-merged/wine*"/>
-    <action search="glob" command="delete" path="~/.local/share/applications/wine"/>
-    <action search="glob" command="delete" path="~/.local/share/desktop-directories/wine*"/>
-    <action search="glob" command="delete" path="~/.local/share/icons/????_*.{xpm,png}"/>
-    <action search="glob" command="delete" path="~/.local/share/icons/*-x-wine-*.{xpm,png} }}}"/>
-  </option>
+    <label>WINE</label>
+    <description>Windows API implementation</description>
+    <option id="fileassociations">
+        <label>File associations</label>
+        <description>Delete WINE programs file associations</description>
+        <action search="glob" command="delete" path="~/.local/share/mime/packages/x-wine*" />
+        <action search="glob" command="delete" path="~/.local/share/applications/wine-extension*" />
+        <action search="glob" command="delete" path="~/.local/share/icons/hicolor/*/*/application-x-wine-extension*" />
+        <action search="glob" command="delete" path="~/.local/share/mime/application/x-wine-extension*" />
+    </option>
+    <option id="menuentries">
+        <label>Menu entries</label>
+        <description>Delete WINE program menu entries</description>
+        <action search="glob" command="delete" path="~/.config/menus/applications-merged/wine*" />
+        <action search="glob" command="delete" path="~/.local/share/applications/wine" />
+        <action search="glob" command="delete" path="~/.local/share/desktop-directories/wine*" />
+        <action search="glob" command="delete" path="~/.local/share/icons/????_*.{xpm,png}" />
+        <action search="glob" command="delete" path="~/.local/share/icons/*-x-wine-*.{xpm,png} }}}" />
+    </option>
 </cleaner>
