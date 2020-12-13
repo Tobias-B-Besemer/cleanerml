@@ -1,0 +1,9 @@
+{
+  "XML": {
+    "beautifiers": [
+      "Pretty Diff",
+      "JS-Beautify"
+    ],
+    "align_assignments": true
+  }
+}
